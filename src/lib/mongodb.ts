@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI!;
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/stock-predictor";
 const options = {};
 
 let client;
@@ -10,7 +10,8 @@ declare global {
   var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
-if (!process.env.MONGODB_URI) {
+// Only throw error in production if MONGODB_URI is missing
+if (!process.env.MONGODB_URI && process.env.NODE_ENV === "production") {
   throw new Error("Please define the MONGODB_URI environment variable");
 }
 

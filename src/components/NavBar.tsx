@@ -39,6 +39,14 @@ export default function NavBar() {
             </Link>
             {session && (
               <Link 
+                href="/prediction" 
+                className="text-white hover:text-blue-200 transition-colors duration-200 font-medium"
+              >
+                Stock Predictor
+              </Link>
+            )}
+            {session && (
+              <Link 
                 href="/dashboard" 
                 className="text-white hover:text-blue-200 transition-colors duration-200 font-medium"
               >
@@ -86,7 +94,7 @@ export default function NavBar() {
             <div className="flex items-center space-x-3">
               <Link 
                 href="/register" 
-                className="text-white hover:text-blue-200 transition-colors duration-200 font-medium"
+                className="bg-white text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition-all duration-200 font-medium"
               >
                 Register
               </Link>
