@@ -2,10 +2,6 @@
 
 A stock market prediction application using Brain.js neural networks to predict future stock prices from historical data.
 
-## Deployment
-
-- **Part A:** https://stock-market-predictor-assignment4.vercel.app
-- **Part B:** [Your deployment URL here]
 
 ## Features
 
